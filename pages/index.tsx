@@ -1,10 +1,11 @@
 import tw from 'tailwind-styled-components'
 import { Text } from '../Components/Text'
+import { Button } from '../Components/Button/index'
+// import BeatLoader
 
 const App = () => {
-  const DivContainer = tw.div` flex gap-2`
-  const Container = tw.div`
-  flex-1
+  const DivContainer = tw.div` grid grid-cols-3 gap-1`
+  const Container = tw.div` 
    border-2
   text-4xl
   h-60
@@ -18,8 +19,8 @@ const App = () => {
       <Container className='bg-blue-600 '>
         <Text id='Styles' />
       </Container>
-      <Container className='bg-blue-800 '>
-        <Text id='Locale' />
+      <Container className='bg-blue-900'>
+        <Button loading={true} className='bg-blue-600 h-20 w-12' />
       </Container>
     </DivContainer>
   )
